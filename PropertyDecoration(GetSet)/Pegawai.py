@@ -5,10 +5,15 @@ class Pegawai:
         self.__emailPegawai = email
         self.__gajiPegawai = gaji
 
+    # decoration ini digunakan untuk mengakses property
+    # nama pegawai agar dapat diakses tanpa menggunakan
+    # intance.namaPegawai() melainkan instance.namaPegawai
     @property
     def namaPegawai(self):
         return self.__namaPegawai
 
+    # nama dari decoration harus sama dengan nama property
+    # kemudian diakhiri dengan kata setter untuk menandakan bahwa ini adalah setter dari property
     @namaPegawai.setter
     def namaPegawai(self, nama):
         self.__namaPegawai = nama
